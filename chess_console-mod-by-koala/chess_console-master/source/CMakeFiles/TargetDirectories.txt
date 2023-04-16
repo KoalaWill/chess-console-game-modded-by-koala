@@ -1,0 +1,3 @@
+C:/Users/~owo~/Documents/GitHub/chess_console-master/chess_console-master/source/CMakeFiles/chess.dir
+C:/Users/~owo~/Documents/GitHub/chess_console-master/chess_console-master/source/CMakeFiles/ALL_BUILD.dir
+C:/Users/~owo~/Documents/GitHub/chess_console-master/chess_console-master/source/CMakeFiles/ZERO_CHECK.dir
