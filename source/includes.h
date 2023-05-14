@@ -1,6 +1,8 @@
 #pragma once
+
 #include <stdio.h>
 #include <iostream>
+#include <fstream>
 #include <iomanip>
 #include <string>
 #include <deque>

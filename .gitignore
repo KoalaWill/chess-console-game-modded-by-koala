@@ -26,13 +26,13 @@
 *.a
 *.lib
 
-# Executables
-*.exe
-*.out
-*.app
+# # Executables
+# *.exe
+# *.out
+# *.app
 
-#Ignore the whole build folder
-build/
+# #Ignore the whole build folder
+# build/
 
 #Visual Studio
 *.VC.db

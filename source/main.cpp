@@ -1,16 +1,15 @@
 #include "includes.h"
-
 #include "user_interface.h"
 #include "chess.h"
-
 #include "debug.h"
-
+#include <windows.h>
 
 //---------------------------------------------------------------------------------------
 // Global variable
 //---------------------------------------------------------------------------------------
 Game* current_game = NULL;
-
+//stings saved for communicating with StockFish
+string command = "position startpos move ";
 
 //---------------------------------------------------------------------------------------
 // Helper
@@ -401,7 +400,8 @@ void makeTheMove(Chess::Position present, Chess::Position future, Chess::EnPassa
 void newGame(void)
 {
    if (NULL != current_game)
-   {
+   {  
+      command = "position startpos move ";
       delete current_game;
    }
 
@@ -418,6 +418,170 @@ void undoMove(void)
 
    current_game->undoLastMove();
    createNextMessage("Last move was undone\n");
+}
+
+//---------------------------------------------------------------------------------------
+// Al Mover
+//---------------------------------------------------------------------------------------
+void AI_move(char fromC, char fromR, char toC, char toR, bool Is_promotion, char To_what) {
+   cout << "apply AI move ? (type y or n)\n";
+   std::string reply;
+   reply.clear();
+   reply += getchar();
+   while(reply[0] != 'y' && reply[0] != 'n'){
+      cout << "Are you sure you know how to type ???\n";
+      reply.clear();
+      reply += getchar();
+   }
+   if(reply[0] == 'y'){
+      
+      string tmp; // temp to save the Ai's reply
+      string ans;
+      ans.clear();
+      string temp_command;
+      command += (tolower(fromC)); command += (tolower(fromR)); command += (tolower(toC)); command+=(tolower(toR));
+      if(Is_promotion){
+         command += (tolower(To_what));
+      }
+      command.append(" ");
+      temp_command = command;
+
+      fstream my_file;
+      my_file.open ("temp_in.txt");
+      if (my_file.is_open()){ //checking whether the file is open
+         // cout << temp_command << endl;
+         // cout << 'd' << endl;
+         // cout << "go movetime 4000\n";
+         // cout << "go movetime 4000\n";
+         my_file << temp_command << endl;
+         my_file << 'd' << endl;
+         my_file << "go movetime 4000\n";
+         my_file << "go movetime 4000\n";
+         my_file.close();
+      }
+      
+      std::system("test.bat");
+      cout << "AI thinking...\n";
+
+      Sleep(5000);
+
+      my_file.open("temp_out.txt"); //open a file to perform read operation using file object
+      if (my_file.is_open()){ //checking whether the file is open
+         while(getline(my_file, tmp)){ //read data from file object and put it into string.
+            auto found = tmp.find("bestmove");
+            if( found != string::npos){
+               if(Is_promotion){
+                  ans = tmp.substr(9, 5);
+                  cout << ans << endl;
+                  break;
+               }
+               else{
+                  ans = tmp.substr(9, 4);
+                  cout << ans << endl;
+                  break;
+               }
+            }
+         }
+         my_file.close(); //close the file object.
+      }
+
+      command += (ans);
+      command.append(" ");
+
+      std::string to_record;
+      Chess::Position present;
+      present.iColumn = toupper(ans[0]);
+      present.iRow = toupper(ans[1]);
+
+      // Put in the string to be logged
+      to_record += present.iColumn;
+      to_record += present.iRow;
+      to_record += "-";
+
+      // Convert column from ['A'-'H'] to [0x00-0x07]
+      present.iColumn = present.iColumn - 'A';
+
+      // Convert row from ['1'-'8'] to [0x00-0x07]
+      present.iRow = present.iRow - '1';
+
+      Chess::Position future;
+      future.iColumn = toupper(ans[2]);
+      future.iRow = toupper(ans[3]);
+      // Put in the string to be logged
+      to_record += future.iColumn;
+      to_record += future.iRow;
+
+      // Convert columns from ['A'-'H'] to [0x00-0x07]
+      future.iColumn = future.iColumn - 'A';
+
+      // Convert row from ['1'-'8'] to [0x00-0x07]
+      future.iRow = future.iRow - '1';
+
+      Chess::EnPassant S_enPassant = {0};
+      Chess::Castling S_castling = {0};
+      Chess::Promotion S_promotion = {0};
+
+      isMoveValid(present, future, &S_enPassant, &S_castling, &S_promotion);
+
+      if(S_promotion.bApplied == true)
+      {
+         std::string piece;
+         piece.clear();
+         piece += ans[4];
+         char chPromoted = toupper(piece[0]);
+
+         S_promotion.chBefore = current_game->getPieceAtPosition(present.iRow, present.iColumn);
+
+         if (Chess::WHITE_PLAYER == current_game->getCurrentTurn())
+         {
+            S_promotion.chAfter = toupper(chPromoted);
+         }
+         else
+         {
+            S_promotion.chAfter = tolower(chPromoted);
+         }
+         to_record += '=';
+         to_record += toupper(chPromoted); // always log with a capital letter
+      }
+
+      current_game->logMove(to_record);
+      makeTheMove(present, future, &S_enPassant, &S_castling, &S_promotion);
+
+      if (true == current_game->playerKingInCheck())
+      {
+         if (true == current_game->isCheckMate())
+         {
+            if (Chess::WHITE_PLAYER == current_game->getCurrentTurn())
+            {
+                  appendToNextMessage("Checkmate! Black wins the game!\n");
+            }
+            else
+            {
+                  appendToNextMessage("Checkmate! White wins the game!\n");
+            }
+         }
+         else
+         {
+            // Add to the string with '+=' because it's possible that
+            // there is already one message (e.g., piece captured)
+            if (Chess::WHITE_PLAYER == current_game->getCurrentTurn())
+            {
+                  appendToNextMessage("White king is in check!\n");
+            }
+            else
+            {
+                  appendToNextMessage("Black king is in check!\n");
+            }
+         }
+      }
+      //clearScreen();
+      printLogo();
+      printSituation( *current_game );
+      printBoard( *current_game );
+   }
+   else{
+      cout << "AI process ended\n";
+   }
 }
 
 void movePiece(void)
@@ -567,10 +731,10 @@ void movePiece(void)
    // Promotion: user most choose a piece to
    // replace the pawn
    // ---------------------------------------------------
+   std::string piece;
    if ( S_promotion.bApplied == true )
    {
       cout << "Promote to (Q, R, N, B): ";
-      std::string piece;
       getline(cin, piece);
 
       if ( piece.length() > 1 )
@@ -612,6 +776,16 @@ void movePiece(void)
    // Make the move
    // ---------------------------------------------------
    makeTheMove(present, future, &S_enPassant, &S_castling, &S_promotion);
+
+   // ---------------------------------------------------
+   // Attempt to call StockFish
+   // ---------------------------------------------------   
+   if ( S_promotion.bApplied == true ){
+      AI_move(move_from[0], move_from[1], move_to[0], move_to[1], 1, piece[0]);
+   }
+   else{
+      AI_move(move_from[0], move_from[1], move_to[0], move_to[1], 0, 'n');
+   }
 
    // ---------------------------------------------------------------
    // Check if this move we just did put the oponent's king in check
@@ -877,6 +1051,7 @@ int main()
             case 'Q':
             case 'q':
             {
+               command = "position startpos move ";
                bRun = false;
             }
             break;

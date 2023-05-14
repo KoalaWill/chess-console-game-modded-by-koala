@@ -1,0 +1,7 @@
+position startpos move e2e4 
+d
+go movetime 4000
+go movetime 4000
+
+go movetime 4000
+000
