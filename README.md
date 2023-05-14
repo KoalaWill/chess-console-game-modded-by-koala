@@ -10,12 +10,14 @@
 
 ## How to change it....
  1. Fork it, or download it(of course)
- 2. 
+ 2. run
     ```
     cmake CmakeLists.txt
     ```
- 3. 
+ 3.
+    if it mentions error about the file directory, delete the catche file and run the command above again
+ 4. 
     build it or press "F7"
- 4. got to the build folder
- 5. run it. ( I mean, it is quite obvious )
+ 5. got to the build folder
+ 6. run it. ( I mean, it is quite obvious )
 
