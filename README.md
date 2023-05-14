@@ -1,5 +1,5 @@
 # chess-console-game-modded-by-koala
- This is a chess console game forked from https://github.com/jeromevonk/chess_console and slightly changed by me
+ This is a chess console game forked from https://github.com/jeromevonk/chess_console and edited, added AI by me
 
 <br />
 
