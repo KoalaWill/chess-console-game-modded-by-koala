@@ -1,10 +1,11 @@
 # chess-console-game-modded-by-koala
- This is a chess console game forked from https://github.com/jeromevonk/chess_console and edited, added AI by me
+ This is a chess console game forked from https://github.com/jeromevonk/chess_console and edited, added AI (using stockfish.exe) by me
 
 <br />
 
 ## How to use it....
- Just call the exe file in the build folder 
+ Just call the exe file in the build folder.
+ If you meet dll problems....I think you can fix it on your own
  
 <br />
 
