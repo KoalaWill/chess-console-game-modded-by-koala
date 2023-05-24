@@ -434,7 +434,7 @@ void AI_move(char fromC, char fromR, char toC, char toR, bool Is_promotion, char
       reply += getchar();
    }
    if(reply[0] == 'y'){
-      
+      cin.ignore();
       string tmp; // temp to save the Ai's reply
       string ans;
       ans.clear();
