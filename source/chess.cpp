@@ -1451,7 +1451,7 @@ bool Game::isCheckMate()
       if ( EMPTY_SQUARE != getPieceAtPosition(iRowToTest, iColumnToTest) )
       {
          // That square is not empty, so no need to test
-         // TODO: what if it's an oponent piece?
+         // to_do: what if it's an oponent piece?
          continue;
       }
 

@@ -68,10 +68,24 @@ include CMakeFiles/chess.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/chess.dir/flags.make
 
+CMakeFiles/chess.dir/serialib.cpp.obj: CMakeFiles/chess.dir/flags.make
+CMakeFiles/chess.dir/serialib.cpp.obj: C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/serialib.cpp
+CMakeFiles/chess.dir/serialib.cpp.obj: CMakeFiles/chess.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chess.dir/serialib.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/serialib.cpp.obj -MF CMakeFiles\chess.dir\serialib.cpp.obj.d -o CMakeFiles\chess.dir\serialib.cpp.obj -c C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\source\serialib.cpp
+
+CMakeFiles/chess.dir/serialib.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chess.dir/serialib.cpp.i"
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\source\serialib.cpp > CMakeFiles\chess.dir\serialib.cpp.i
+
+CMakeFiles/chess.dir/serialib.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chess.dir/serialib.cpp.s"
+	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\source\serialib.cpp -o CMakeFiles\chess.dir\serialib.cpp.s
+
 CMakeFiles/chess.dir/chess.cpp.obj: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/chess.cpp.obj: C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/chess.cpp
 CMakeFiles/chess.dir/chess.cpp.obj: CMakeFiles/chess.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/chess.dir/chess.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/chess.dir/chess.cpp.obj"
 	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/chess.cpp.obj -MF CMakeFiles\chess.dir\chess.cpp.obj.d -o CMakeFiles\chess.dir\chess.cpp.obj -c C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\source\chess.cpp
 
 CMakeFiles/chess.dir/chess.cpp.i: cmake_force
@@ -85,7 +99,7 @@ CMakeFiles/chess.dir/chess.cpp.s: cmake_force
 CMakeFiles/chess.dir/user_interface.cpp.obj: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/user_interface.cpp.obj: C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/user_interface.cpp
 CMakeFiles/chess.dir/user_interface.cpp.obj: CMakeFiles/chess.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/chess.dir/user_interface.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chess.dir/user_interface.cpp.obj"
 	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/user_interface.cpp.obj -MF CMakeFiles\chess.dir\user_interface.cpp.obj.d -o CMakeFiles\chess.dir\user_interface.cpp.obj -c C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\source\user_interface.cpp
 
 CMakeFiles/chess.dir/user_interface.cpp.i: cmake_force
@@ -99,7 +113,7 @@ CMakeFiles/chess.dir/user_interface.cpp.s: cmake_force
 CMakeFiles/chess.dir/main.cpp.obj: CMakeFiles/chess.dir/flags.make
 CMakeFiles/chess.dir/main.cpp.obj: C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/main.cpp
 CMakeFiles/chess.dir/main.cpp.obj: CMakeFiles/chess.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/chess.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/chess.dir/main.cpp.obj"
 	C:\PROGRA~1\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chess.dir/main.cpp.obj -MF CMakeFiles\chess.dir\main.cpp.obj.d -o CMakeFiles\chess.dir\main.cpp.obj -c C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\source\main.cpp
 
 CMakeFiles/chess.dir/main.cpp.i: cmake_force
@@ -112,6 +126,7 @@ CMakeFiles/chess.dir/main.cpp.s: cmake_force
 
 # Object files for target chess
 chess_OBJECTS = \
+"CMakeFiles/chess.dir/serialib.cpp.obj" \
 "CMakeFiles/chess.dir/chess.cpp.obj" \
 "CMakeFiles/chess.dir/user_interface.cpp.obj" \
 "CMakeFiles/chess.dir/main.cpp.obj"
@@ -119,6 +134,7 @@ chess_OBJECTS = \
 # External object files for target chess
 chess_EXTERNAL_OBJECTS =
 
+chess.exe: CMakeFiles/chess.dir/serialib.cpp.obj
 chess.exe: CMakeFiles/chess.dir/chess.cpp.obj
 chess.exe: CMakeFiles/chess.dir/user_interface.cpp.obj
 chess.exe: CMakeFiles/chess.dir/main.cpp.obj
@@ -126,7 +142,7 @@ chess.exe: CMakeFiles/chess.dir/build.make
 chess.exe: CMakeFiles/chess.dir/linkLibs.rsp
 chess.exe: CMakeFiles/chess.dir/objects1.rsp
 chess.exe: CMakeFiles/chess.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable chess.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\~owo~\Documents\GitHub\chess-console-game-modded-by-koala\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable chess.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\chess.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

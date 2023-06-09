@@ -1,20 +1,26 @@
 [
 {
   "directory": "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/build",
-  "command": "C:\\PROGRA~1\\mingw64\\bin\\G__~1.EXE   -g -std=gnu++11 -o CMakeFiles\\chess.dir\\chess.cpp.obj -c C:\\Users\\~owo~\\Documents\\GitHub\\chess-console-game-modded-by-koala\\source\\chess.cpp",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\G__~1.EXE   -g -std=gnu++11 -o CMakeFiles\\chess2.dir\\serialib.cpp.obj -c C:\\Users\\~owo~\\Documents\\GitHub\\chess-console-game-modded-by-koala\\source\\serialib.cpp",
+  "file": "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/serialib.cpp",
+  "output": "CMakeFiles/chess2.dir/serialib.cpp.obj"
+},
+{
+  "directory": "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/build",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\G__~1.EXE   -g -std=gnu++11 -o CMakeFiles\\chess2.dir\\chess.cpp.obj -c C:\\Users\\~owo~\\Documents\\GitHub\\chess-console-game-modded-by-koala\\source\\chess.cpp",
   "file": "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/chess.cpp",
-  "output": "CMakeFiles/chess.dir/chess.cpp.obj"
+  "output": "CMakeFiles/chess2.dir/chess.cpp.obj"
 },
 {
   "directory": "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/build",
-  "command": "C:\\PROGRA~1\\mingw64\\bin\\G__~1.EXE   -g -std=gnu++11 -o CMakeFiles\\chess.dir\\user_interface.cpp.obj -c C:\\Users\\~owo~\\Documents\\GitHub\\chess-console-game-modded-by-koala\\source\\user_interface.cpp",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\G__~1.EXE   -g -std=gnu++11 -o CMakeFiles\\chess2.dir\\user_interface.cpp.obj -c C:\\Users\\~owo~\\Documents\\GitHub\\chess-console-game-modded-by-koala\\source\\user_interface.cpp",
   "file": "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/user_interface.cpp",
-  "output": "CMakeFiles/chess.dir/user_interface.cpp.obj"
+  "output": "CMakeFiles/chess2.dir/user_interface.cpp.obj"
 },
 {
   "directory": "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/build",
-  "command": "C:\\PROGRA~1\\mingw64\\bin\\G__~1.EXE   -g -std=gnu++11 -o CMakeFiles\\chess.dir\\main.cpp.obj -c C:\\Users\\~owo~\\Documents\\GitHub\\chess-console-game-modded-by-koala\\source\\main.cpp",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\G__~1.EXE   -g -std=gnu++11 -o CMakeFiles\\chess2.dir\\main.cpp.obj -c C:\\Users\\~owo~\\Documents\\GitHub\\chess-console-game-modded-by-koala\\source\\main.cpp",
   "file": "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/main.cpp",
-  "output": "CMakeFiles/chess.dir/main.cpp.obj"
+  "output": "CMakeFiles/chess2.dir/main.cpp.obj"
 }
 ]

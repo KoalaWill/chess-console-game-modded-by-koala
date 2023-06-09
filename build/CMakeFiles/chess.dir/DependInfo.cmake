@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/chess.cpp" "CMakeFiles/chess.dir/chess.cpp.obj" "gcc" "CMakeFiles/chess.dir/chess.cpp.obj.d"
   "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/main.cpp" "CMakeFiles/chess.dir/main.cpp.obj" "gcc" "CMakeFiles/chess.dir/main.cpp.obj.d"
+  "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/serialib.cpp" "CMakeFiles/chess.dir/serialib.cpp.obj" "gcc" "CMakeFiles/chess.dir/serialib.cpp.obj.d"
   "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source/user_interface.cpp" "CMakeFiles/chess.dir/user_interface.cpp.obj" "gcc" "CMakeFiles/chess.dir/user_interface.cpp.obj.d"
   )
 

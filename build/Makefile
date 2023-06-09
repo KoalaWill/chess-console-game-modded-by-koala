@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named chess
+# Target rules for targets named chess2
 
 # Build rule for target.
-chess: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 chess
-.PHONY : chess
+chess2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 chess2
+.PHONY : chess2
 
 # fast build rule for target.
-chess/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/build
-.PHONY : chess/fast
+chess2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/build
+.PHONY : chess2/fast
 
 chess.obj: chess.cpp.obj
 .PHONY : chess.obj
 
 # target to build an object file
 chess.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/chess.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/chess.cpp.obj
 .PHONY : chess.cpp.obj
 
 chess.i: chess.cpp.i
@@ -141,7 +141,7 @@ chess.i: chess.cpp.i
 
 # target to preprocess a source file
 chess.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/chess.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/chess.cpp.i
 .PHONY : chess.cpp.i
 
 chess.s: chess.cpp.s
@@ -149,7 +149,7 @@ chess.s: chess.cpp.s
 
 # target to generate assembly for a file
 chess.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/chess.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/chess.cpp.s
 .PHONY : chess.cpp.s
 
 main.obj: main.cpp.obj
@@ -157,7 +157,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -165,7 +165,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -173,15 +173,39 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+serialib.obj: serialib.cpp.obj
+.PHONY : serialib.obj
+
+# target to build an object file
+serialib.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/serialib.cpp.obj
+.PHONY : serialib.cpp.obj
+
+serialib.i: serialib.cpp.i
+.PHONY : serialib.i
+
+# target to preprocess a source file
+serialib.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/serialib.cpp.i
+.PHONY : serialib.cpp.i
+
+serialib.s: serialib.cpp.s
+.PHONY : serialib.s
+
+# target to generate assembly for a file
+serialib.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/serialib.cpp.s
+.PHONY : serialib.cpp.s
 
 user_interface.obj: user_interface.cpp.obj
 .PHONY : user_interface.obj
 
 # target to build an object file
 user_interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/user_interface.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/user_interface.cpp.obj
 .PHONY : user_interface.cpp.obj
 
 user_interface.i: user_interface.cpp.i
@@ -189,7 +213,7 @@ user_interface.i: user_interface.cpp.i
 
 # target to preprocess a source file
 user_interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/user_interface.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/user_interface.cpp.i
 .PHONY : user_interface.cpp.i
 
 user_interface.s: user_interface.cpp.s
@@ -197,7 +221,7 @@ user_interface.s: user_interface.cpp.s
 
 # target to generate assembly for a file
 user_interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess.dir\build.make CMakeFiles/chess.dir/user_interface.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\chess2.dir\build.make CMakeFiles/chess2.dir/user_interface.cpp.s
 .PHONY : user_interface.cpp.s
 
 # Help Target
@@ -208,13 +232,16 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... chess
+	@echo ... chess2
 	@echo ... chess.obj
 	@echo ... chess.i
 	@echo ... chess.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... serialib.obj
+	@echo ... serialib.i
+	@echo ... serialib.s
 	@echo ... user_interface.obj
 	@echo ... user_interface.i
 	@echo ... user_interface.s

@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/chess.dir/chess.cpp.obj.d"
   "CMakeFiles/chess.dir/main.cpp.obj"
   "CMakeFiles/chess.dir/main.cpp.obj.d"
+  "CMakeFiles/chess.dir/serialib.cpp.obj"
+  "CMakeFiles/chess.dir/serialib.cpp.obj.d"
   "CMakeFiles/chess.dir/user_interface.cpp.obj"
   "CMakeFiles/chess.dir/user_interface.cpp.obj.d"
   "chess.exe"

@@ -759,7 +759,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "chess"
+			"value" : "chess2"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1148,6 +1148,42 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "TRUE"
+		},
+		{
+			"name" : "chess2_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/build"
+		},
+		{
+			"name" : "chess2_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "chess2_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/~owo~/Documents/GitHub/chess-console-game-modded-by-koala/source"
 		},
 		{
 			"name" : "chess_BINARY_DIR",
