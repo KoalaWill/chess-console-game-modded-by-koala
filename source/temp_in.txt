@@ -1,0 +1,4 @@
+position startpos move d2d3 
+d
+go movetime 4000
+go movetime 4000

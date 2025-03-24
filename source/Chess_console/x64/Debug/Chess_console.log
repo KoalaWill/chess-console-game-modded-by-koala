@@ -1,13 +1,20 @@
-﻿  serialib.cpp
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(365,48): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(1006,25): warning C4244: '=': conversion from '_Rep' to 'long', possible loss of data
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(1006,25): warning C4244:         with
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(1006,25): warning C4244:         [
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(1006,25): warning C4244:             _Rep=__int64
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(1006,25): warning C4244:         ]
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(1007,67): warning C4244: '=': conversion from '_Rep' to 'long', possible loss of data
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(1007,67): warning C4244:         with
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(1007,67): warning C4244:         [
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(1007,67): warning C4244:             _Rep=__int64
-D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\serialib.cpp(1007,67): warning C4244:         ]
-  Chess_console.vcxproj -> D:\school\portfolio\AI_Chess portfolio\素材\code\chess_console-master\chess_console-master\source\x64\Debug\Chess_console.exe
+﻿  chess.cpp
+  main.cpp
+D:\Chess game\chess-console-game-modded-by-koala\source\main.cpp(65,37): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Chess game\chess-console-game-modded-by-koala\source\main.cpp(65,21): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  serialib.cpp
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(365,48): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(1006,25): warning C4244: '=': conversion from '_Rep' to 'long', possible loss of data
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(1006,25): warning C4244:         with
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(1006,25): warning C4244:         [
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(1006,25): warning C4244:             _Rep=__int64
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(1006,25): warning C4244:         ]
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(1007,67): warning C4244: '=': conversion from '_Rep' to 'long', possible loss of data
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(1007,67): warning C4244:         with
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(1007,67): warning C4244:         [
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(1007,67): warning C4244:             _Rep=__int64
+D:\Chess game\chess-console-game-modded-by-koala\source\serialib.cpp(1007,67): warning C4244:         ]
+  user_interface.cpp
+D:\Chess game\chess-console-game-modded-by-koala\source\user_interface.cpp(140,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  Chess_console.vcxproj -> D:\Chess game\chess-console-game-modded-by-koala\source\x64\Debug\Chess_console.exe
