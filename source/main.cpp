@@ -19,54 +19,34 @@ string command = "position startpos move ";
 // TODO string of connected port
 
 // TODO arduino serial scan
-string Scan_COMS()
-{
-   serialib device;
-   cout << "Scaning your device...\n";
-   string cur_COM = "COMX";
-   bool found = false;
-   string found_port;
-   for (int i = 1; i <= 255; i++)
-   {
-      if (i <= 10)
-      {
-         cur_COM.pop_back();
-      }
-      else if (i <= 100)
-      {
-         cur_COM.pop_back();
-         cur_COM.pop_back();
-      }
-      else
-      {
-         cur_COM.pop_back();
-         cur_COM.pop_back();
-         cur_COM.pop_back();
-      }
-      cur_COM += to_string(i);
-      // cout << "Now trying --> " << cur_COM << endl;
-      // try to connect to the arduino
-      if (device.openDevice(cur_COM.c_str(), baud) == 1)
-      {
-         cout << "Device detected on " << cur_COM << endl;
-         cout << "Successfully connected to your device !\n";
-         found = true;
-         found_port = cur_COM;
-         // Close the device before testing the next port
-         device.closeDevice();
-         break;
-      }
-   }
-   if (found == false)
-   {
-      cout << "I can't find your device.\n";
-      return 0;
-   }
-   else
-   {
-      port_connected = found_port;
-      return found_port;
-   }
+
+string Scan_COMS() {
+    serialib device;
+    cout << "Scaning your device...\n";
+    char cur_COM[9] = "\\\\.\\COMX";
+    bool found = false;
+    string found_port;
+    for (int i = 1; i <= 255; i++) {
+        sprintf(cur_COM, "\\\\.\\COM%d", i);
+        // try to connect to the arduino
+        if (device.openDevice(cur_COM, baud) == 1) {
+            cout << "Device detected on " << cur_COM << endl;
+            cout << "Successfully connected to your device !\n";
+            found = true;
+            found_port = cur_COM;
+            // Close the device before testing the next port
+            device.closeDevice();
+            break;
+        }
+    }
+    if (found == false) {
+        cout << "I can't find your device.\n";
+        return 0;
+    }
+    else {
+        port_connected = found_port;
+        return found_port;
+    }
 }
 // TODO arduino serial send
 void Send_string(string port, string message)
